@@ -1,0 +1,226 @@
+:root {
+  --soft-red: hsl(10, 79%, 65%);
+  --cyan: hsl(186, 34%, 60%);
+  --dark-brown: hsl(25, 47%, 15%);
+  --medium-brown: hsl(28, 10%, 53%);
+  --cream: hsl(27, 66%, 92%);
+  --very-pale-orange: hsl(33, 100%, 98%);
+  --white: #fff;
+  --font-size: 1.8rem;
+  --font-f-major: "DM Sans", sans-serif;
+  --font-w-regular: 400;
+  --font-w-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+span,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-f-major);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.main {
+  display: grid;
+  place-items: center;
+  max-width: 144rem;
+  min-height: 97vh;
+  margin: 0 auto;
+  background-color: var(--cream);
+}
+
+.container {
+  max-width: 54rem;
+  width: 100%;
+  max-height: 66rem;
+  height: 100%;
+  padding: 0 1rem 0;
+  margin: 5rem 0 5rem;
+}
+
+.balance {
+  background-color: var(--soft-red);
+  height: 12.4rem;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3.6rem 0;
+  margin-bottom: 2.5rem;
+}
+.balance__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--very-pale-orange);
+}
+.balance__name {
+  font-size: 2rem;
+  font-weight: var(--font-w-bold);
+  margin-bottom: 1rem;
+  font-weight: var(--font-w-regular);
+}
+.balance__sum {
+  font-size: 3.2rem;
+}
+.balance__logo-img {
+  width: 6.8rem;
+}
+
+.spend {
+  background-color: var(--very-pale-orange);
+  border-radius: 2rem;
+  max-height: 52rem;
+}
+.spend__box {
+  height: 38rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.heading-primary {
+  color: var(--dark-brown);
+  padding: 2.6rem 4rem 1.8rem;
+  font-size: clamp(2.2rem, 3vw, 3.2rem);
+}
+
+.bars {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  column-gap: 1rem;
+  margin: 0 2.8rem 3rem;
+  height: 28rem;
+  padding-bottom: 3.2rem;
+  border-bottom: 2px solid var(--cream);
+}
+
+.bar {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 3rem;
+}
+.bar__sum {
+  position: absolute;
+  top: -4.8rem;
+  font-size: 1.5rem;
+  font-weight: var(--font-w-bold);
+  width: 6.8rem;
+  height: 4rem;
+  background-color: var(--dark-brown);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  letter-spacing: 1px;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 220ms;
+}
+.bar__chart {
+  margin-bottom: 1rem;
+  background-color: var(--soft-red);
+  max-width: 5rem;
+  width: 100%;
+  border-radius: 0.4rem;
+  transition: all 220ms;
+  cursor: pointer;
+}
+.bar__chart:hover {
+  opacity: 0.6;
+}
+.bar__chart:hover ~ .bar__sum {
+  opacity: 1;
+  visibility: visible;
+}
+.bar__weekday {
+  font-size: 1.6rem;
+  color: var(--medium-brown);
+}
+
+.highlight {
+  background-color: var(--cyan);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 3.8rem 4rem;
+}
+.total__box {
+  line-height: 1;
+}
+.total__spend-date {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  display: block;
+  color: var(--medium-brown);
+  padding-bottom: 1rem;
+}
+.total__sum {
+  font-size: clamp(2.8rem, 5vw, 5rem);
+  color: var(--dark-brown);
+  font-weight: var(--font-w-bold);
+}
+.total__percent {
+  line-height: 1.6;
+  display: grid;
+  justify-items: flex-end;
+}
+.total__amount-percent {
+  display: block;
+  color: var(--dark-brown);
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  font-weight: var(--font-w-bold);
+  line-height: 1;
+}
+.total__expenses-date {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: var(--medium-brown);
+  white-space: nowrap;
+}
+
+.attribution {
+  max-width: 144rem;
+  min-height: 3vh;
+  padding: 1rem 0 1rem;
+  margin: 0 auto;
+  background-color: var(--cream);
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: var(--font-w-bold);
+  transition: all 160ms;
+}
+.attribution a:hover {
+  color: var(--medium-brown);
+}
+
+/*# sourceMappingURL=style.css.map */

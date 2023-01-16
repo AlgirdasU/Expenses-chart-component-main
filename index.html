@@ -1,43 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Expenses chart component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer src="js/script.js"></script>
+    <!-- <script type="module" src="js/script.js"></script> -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="balance">
+          <div class="balance__box">
+            <span class="balance__name">My balance</span>
+            <span class="balance__sum">$921.48</span>
+          </div>
+          <img
+            src="./images/logo.svg"
+            alt="logo image"
+            class="balance__logo-img"
+          />
+        </div>
 
-  My balance
-  $921.48
+        <div class="spend">
+          <div class="spend__box">
+            <h1 class="heading-primary">Spending - Last 7 days</h1>
+            <!-- Render data inside class="bars" -->
+            <div class="bars"></div>
+          </div>
+          <div class="total">
+            <div class="total__box">
+              <span class="total__spend-date">Total this month</span>
+              <span class="total__sum">$478.33</span>
+            </div>
+            <div class="total__percent">
+              <span class="total__amount-percent">+2.4%</span>
+              <span class="total__expenses-date">from last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
 
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>
+      <div class="attribution">
+        <p class="attribution__content">
+          <span>Challenge by</span>
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          ><span>. Coded by </span
+          ><a href="https://github.com/AlgirdasU/Expenses-chart-component-main"
+            >Algirdas</a
+          >.
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
